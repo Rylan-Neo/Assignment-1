@@ -1,0 +1,11 @@
+.nav_bar{
+    background-color: white;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav_bar a:hover {
+    background-color:skyblue;
+    color: black;
+}
