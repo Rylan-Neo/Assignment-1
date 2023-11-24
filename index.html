@@ -8,27 +8,30 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
     <style>
-        body {background-image: url("Background_images/luca-bravo-ESkw2ayO2As-unsplash.jpg");
-        background-size: cover;
-    }
         .headerfont{font-family: 'Times New Roman', Times, serif;}
         h3{font-family: 'Noto Sans JP', sans-serif;}
         h4{font-family: 'Noto Sans JP', sans-serif;}
-        nav li {
-        display: inline-block;
-        margin-right: 100px;
+        body {background-image: url("Background_images/luca-bravo-ESkw2ayO2As-unsplash.jpg");
+        background-size: cover;
+    }
+        html,
+        body {
+            margin: 0;
     }
     </style>
 </head>
 <body>
     <script src="script.js"></script>
     <header id="heading" class="site-header" role="banner">
-        <div class="nav_bar">
+        <div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="samples.html">Samples</a></li>
-                    <li><a href="about.html">About me</a></li>
+                <ul class="nav-bar">
+                    <h2 class="logo-title">
+                        <a>John's Photography</a>
+                    </h2>
+                    <li class = "right"><a href="about.html">About me</a></li>
+                    <li class = "right"><a href="samples.html">Samples</a></li>
+                    <li class = "right"><a href="index.html">Home</a></li>
                 </ul>
             </nav>
         </div>

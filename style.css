@@ -1,11 +1,42 @@
-.nav_bar{
-    background-color: white;
-    text-align: right;
+.site-header .nav-bar{
+    text-decoration: none;
+    font-size: 18px;
+    list-style-type: none;
+}
+.nav-bar a:hover {
+    background-color:skyblue;
+    color: black;
+}
+ul.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 22px 40px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+  ul.nav-bar li {
+    float: left;
+}
+  ul.nav-bar li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
 }
-.nav_bar a:hover {
+  ul.nav-bar li.right {
+    float: right;
+    position: relative; top: 10px;
+}
+.nav-bar .logo-title, .nav-bar li {
+  display: inline-block;
+}
+.site-header .logo-title a {
+    background: url("Background_images/John\'s_Photography-Logo.png") no-repeat;
+    background-size: 50px 50px;
+    padding: 10px 10px 10px 58px;
+}
+.nav-bar a:hover {
     background-color:skyblue;
     color: black;
 }
