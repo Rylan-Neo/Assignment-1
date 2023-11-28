@@ -1,14 +1,13 @@
+/*Navigation bar*/
 .site-header .nav-bar{
     text-decoration: none;
     font-size: 18px;
-    list-style-type: none;
 }
 .nav-bar li:hover {
     background-color:skyblue;
     color: black;
 }
 ul.nav-bar {
-    list-style-type: none;
     margin: 0;
     padding: 22px 40px;
     overflow: hidden;
@@ -40,9 +39,44 @@ ul.nav-bar {
 }
 /*Nav bar squeezes into vertical when compressed below 600px width*/
 @media screen and (max-width: 600px) {
-    ul.nav-bar li.right, 
-    ul.nav-bar li,
-    ul.nav-bar a {float: none;}
+    ul.nav-bar li.right, ul.nav-bar li, ul.nav-bar a {
+      float: none;
+    }
+  a.prelude,a.desc{
+    left: 5%;
+    right: 5%;
+  }
+}
+@media screen and (max-width: 950px) {
+    img.pfp {
+      object-fit: contain;
+      float: none;
+      width: fit-content;
+      height: 360px;
+      object-position: initial;
+    }
+}
+/*About me content*/
+.box {
+  display: flex;
+  display: inline-block;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 30px;
+  margin: 60px;
+}
+.pfp {
+  float: right;
+  padding-left: 30px;
+  width: 540px;
+  height: 600px;
+  object-fit: none;
+  object-position: left;
+}
+/*About me text*/
+.story {
+  flex-wrap: wrap;
 }
 /*Text that comes along with falling shader box*/
 .grid .prelude {
@@ -53,8 +87,10 @@ ul.nav-bar {
   font-weight: normal;
   font-style: italic;
   font-weight: bold;
-  left: 45%;
   top: 48%;
+}
+.big-text {
+  justify-content: center;
 }
 .prelude, .desc, .copyright {
   color: white;
@@ -62,20 +98,19 @@ ul.nav-bar {
   font-size: 3.5rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  font-weight: bold;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  text-align: center;
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
   position: absolute;
   top: 50%;
-  left: 29.5%;
   animation: fade-in 7s;
+  left: 25%;
 }
 /*Shader box dropdown*/
 .grid {
   display: grid;
-  text-align: center;
   padding: 0;
   margin: 0;
   position: relative;
@@ -84,7 +119,6 @@ ul.nav-bar {
 .dropdown{
   max-width: 100%;
   max-height: 100vh;
-  margin: auto;
 }
 /*For the animations*/
 @keyframes move {
@@ -102,6 +136,6 @@ ul.nav-bar {
 /*Copyright add on*/
 .copyright {
   font-size: 14px;
-  left: 84%;
   top: 97%;
+  left: 5%;
 }
