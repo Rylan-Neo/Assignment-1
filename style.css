@@ -47,24 +47,57 @@ ul.nav-bar {
     right: 5%;
   }
 }
+/*Media query for the about me page so it adjusts for small screens*/
 @media screen and (max-width: 950px) {
     img.pfp {
+      display: flex;
       object-fit: contain;
       float: none;
-      width: fit-content;
-      height: 360px;
-      object-position: initial;
+      width: 100%;
+      height: 100%;
+      object-position: left;
+      padding-left: 0;
+      padding-bottom: 30px;
+    }
+    div.container{
+      max-height: 480px;
     }
 }
-/*About me content*/
-.box {
-  display: flex;
+/*Sample page category bars*/
+img.category1, img.category2, img.category3 {
+  width: 100%;
   display: inline-block;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+  float: left;
+  max-width: 31.2%;
+}
+.category1{
+  padding-right: 1.5625%;
+}
+.category2{
+  padding: 0px 1.5625% 0px;
+}
+.category3{
+  padding-left: 1.5625%;
+}
+.selection {
+  padding: 1.5625% 3.125% 1.5625%;
+  margin: 3.125% 1.5625% 3.125%;
+  z-index: 1;
+}
+/**/
+.buttons {
+
+}
+/*About me content*/
+.box, .selection {
+  display: inline-block;
   background-color: rgba(255, 255, 255, 0.7);
+  animation: fade-in 3s;
+}
+.box {
   padding: 30px;
   margin: 60px;
+  flex-wrap: wrap;
 }
 .pfp {
   float: right;
@@ -76,6 +109,9 @@ ul.nav-bar {
 }
 /*About me text*/
 .story {
+  flex-grow: 1;
+  flex-basis: 45%;
+  flex: 1 46%;
   flex-wrap: wrap;
 }
 /*Text that comes along with falling shader box*/
@@ -106,7 +142,7 @@ ul.nav-bar {
   position: absolute;
   top: 50%;
   animation: fade-in 7s;
-  left: 25%;
+  left: 30%;
 }
 /*Shader box dropdown*/
 .grid {
