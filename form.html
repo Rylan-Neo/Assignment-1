@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact me form</title>
+    <title>John's photograhy website - Samples</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
     <style>
         .headerfont{font-family: 'Times New Roman', Times, serif;}
         h3{font-family: 'Noto Sans JP', sans-serif;}
         h4{font-family: 'Noto Sans JP', sans-serif;}
-        body {
-        background-color: grey;
+        body {background-image: url("Background_images/luca-bravo-ESkw2ayO2As-unsplash.jpg");
+        background-size: cover;
+        z-index: 0;
+        position: relative;
+        background-repeat: no-repeat;
         }
         html,
         body {
@@ -20,18 +24,36 @@
     }
     </style>
 </head>
-<form onsubmit="return false">
-    <body>
-        <script src="script.js"></script>
-        <section>
-            <div>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="email">Please enter your email:</label><br>
-                <input type="email" id="email" name="email"><br><br>
-                <span></span><br> 
-                <textarea id="question" rows="8"></textarea><br><br>
-            </div>
-        </section>
-    </body>
-</form>
+<body>
+    <script src="script.js"></script>
+    <header id="heading" class="site-header" role="banner">
+        <div>
+            <nav>
+                <ul class="nav-bar">
+                    <h2 class="logo-title">
+                        <a>John's Photography</a>
+                    </h2>
+                    <li class = "right"><a href="about.html">About me</a></li>
+                    <li class = "right"><a href="samples.html">Samples</a></li>
+                    <li class = "right"><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="box">
+            <form action="about.html">
+                <div class="form">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" size="100"><br><br>
+                    <label for="email">Please enter your email:</label><br>
+                    <input type="email" id="email" name="email" size="100"><br><br>
+                    <span>What is your request?</span><br> 
+                    <textarea id="question" rows="8"></textarea><br><br>
+                    <button onclick="sendContact();">Send response</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+

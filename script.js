@@ -1,4 +1,4 @@
-function formn() {
-    var popup = document.getElementById("form-test");
-    popup.classList.toggle("show");
-  }
+function sendContact() {
+    document.getElementById("name").submit();
+    alert(`${name}, thank you for the response!`)
+}
